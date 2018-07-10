@@ -34,7 +34,7 @@ describe Mutations::CreateReservation do
     
     it 'creates a reservation' do
       allow(Place).to receive(:find).and_return(place)
-      result = SonderPracticeSchema.execute(query, variables: variables, context: context, operation_name: nil)
+      result = Schema.execute(query, variables: variables, context: context, operation_name: nil)
       reservation = result.to_h['data']['createReservation']['reservation']
       expect(Date.parse(reservation['startDate']).to_s).to eq(start_date)
       expect(Date.parse(reservation['endDate']).to_s).to eq(end_date)

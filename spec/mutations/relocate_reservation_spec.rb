@@ -42,7 +42,7 @@ describe Mutations::RelocateReservation do
     
     it 'creates a reservation' do
       # allow(Place).to receive(:find).and_return(place)
-      result = SonderPracticeSchema.execute(query, variables: variables, context: context, operation_name: nil)
+      result = Schema.execute(query, variables: variables, context: context, operation_name: nil)
       
       reservation = result.to_h['data']['relocateReservation']['reservation']
       new_reservation = result.to_h['data']['relocateReservation']['newReservation']

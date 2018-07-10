@@ -32,3 +32,4 @@ gem 'graphql', '1.8.4'
 gem 'graphiql-rails', group: :development
 gem 'geocoder'
 gem 'paper_trail'
+gem 'react_on_rails'
